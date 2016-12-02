@@ -7,7 +7,7 @@ module Bothan
       self.class.base_uri endpoint
     end
 
-    def list
+    def all
       self.class.get('/metrics').parsed_response
     end
 

@@ -7,8 +7,8 @@ module Bothan
       @metrics = described_class.new('https://username:password@demo.bothan.io')
     end
 
-    it 'lists metrics', :vcr do
-      expect(@metrics.list).to eq({
+    it 'lists metrics' do
+      expect(@metrics.all).to eq({
         "metrics" => [
           {
             "name"=>"metric-with-geodata",

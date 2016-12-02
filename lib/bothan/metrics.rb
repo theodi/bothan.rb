@@ -11,8 +11,12 @@ module Bothan
       self.class.get('/metrics').parsed_response
     end
 
-    def find(metric)
-      metric = self.class.get("/metrics/#{metric}").parsed_response
+    def find(metric, from = nil, to = nil)
+      if from.nil? && to.nil?
+        metric = self.class.get("/metrics/#{metric}").parsed_response
+      elsif !from.nil? && to.nil?
+        metric = self.class.get("/metrics/#{metric}/#{from}").parsed_response
+      end
       raise MetricNotFound if metric.nil?
       metric
     end

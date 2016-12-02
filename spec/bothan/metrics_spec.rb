@@ -47,5 +47,14 @@ module Bothan
       expect { @metrics.find('not-a-metric') }.to raise_error(Bothan::MetricNotFound)
     end
 
+    it 'gets a metric for a datetime' do
+      expect(@metrics.find('simple-metric', '2016-11-28T07:00:16.534+00:00')).to eq({
+        "_id" => {"$oid"=>"58411c0044f5440004aaad23"},
+        "name"=>"simple-metric",
+        "time"=>"2016-11-28T07:00:16.534+00:00",
+        "value"=>16
+      })
+    end
+
   end
 end

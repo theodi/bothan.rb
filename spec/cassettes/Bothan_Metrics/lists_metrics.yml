@@ -1,0 +1,45 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://demo.bothan.io/metrics
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 02 Dec 2016 14:10:46 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '496'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d4777e25b572713d6f128c7703daec1161480687846; expires=Sat, 02-Dec-17
+        14:10:46 GMT; path=/; domain=.bothan.io; HttpOnly
+      Vary:
+      - Accept, Origin
+      X-Content-Type-Options:
+      - nosniff
+      Via:
+      - 1.1 vegur
+      Strict-Transport-Security:
+      - max-age=0; includeSubDomains
+      Server:
+      - cloudflare-nginx
+      Cf-Ray:
+      - 30af5d423e2d34b8-LHR
+    body:
+      encoding: UTF-8
+      string: '{"metrics":[{"name":"metric-with-geodata","url":"https://demo.bothan.io/metrics/metric-with-geodata.json"},{"name":"metric-with-multiple-values","url":"https://demo.bothan.io/metrics/metric-with-multiple-values.json"},{"name":"metric-with-target","url":"https://demo.bothan.io/metrics/metric-with-target.json"},{"name":"metric-with-ytd-target","url":"https://demo.bothan.io/metrics/metric-with-ytd-target.json"},{"name":"simple-metric","url":"https://demo.bothan.io/metrics/simple-metric.json"}]}'
+    http_version: 
+  recorded_at: Fri, 02 Dec 2016 14:10:46 GMT
+recorded_with: VCR 3.0.3

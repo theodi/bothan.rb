@@ -16,6 +16,8 @@ module Bothan
         metric = self.class.get("/metrics/#{metric}").parsed_response
       elsif !from.nil? && to.nil?
         metric = self.class.get("/metrics/#{metric}/#{from}").parsed_response
+      elsif !from.nil? && !to.nil?
+        metric = self.class.get("/metrics/#{metric}/#{from}/#{to}").parsed_response
       end
       raise MetricNotFound if metric.nil?
       metric

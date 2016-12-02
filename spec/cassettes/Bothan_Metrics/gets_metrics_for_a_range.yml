@@ -1,0 +1,45 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://demo.bothan.io/metrics/simple-metric/2016-11-02T14:55:07+00:00/2016-12-02T14:55:07+00:00
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 02 Dec 2016 14:55:33 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '281'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d74427676bf199cc2a2af74c7b735198d1480690533; expires=Sat, 02-Dec-17
+        14:55:33 GMT; path=/; domain=.bothan.io; HttpOnly
+      Vary:
+      - Accept, Origin
+      X-Content-Type-Options:
+      - nosniff
+      Via:
+      - 1.1 vegur
+      Strict-Transport-Security:
+      - max-age=0; includeSubDomains
+      Server:
+      - cloudflare-nginx
+      Cf-Ray:
+      - 30af9ed9bb6534e2-LHR
+    body:
+      encoding: UTF-8
+      string: '{"count":5,"values":[{"time":"2016-11-28T07:00:16.534+00:00","value":16},{"time":"2016-11-29T07:00:16.516+00:00","value":8},{"time":"2016-11-30T07:00:16.497+00:00","value":86},{"time":"2016-12-01T07:00:16.475+00:00","value":32},{"time":"2016-12-02T07:00:16.450+00:00","value":22}]}'
+    http_version: 
+  recorded_at: Fri, 02 Dec 2016 14:55:33 GMT
+recorded_with: VCR 3.0.3

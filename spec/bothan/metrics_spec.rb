@@ -56,5 +56,18 @@ module Bothan
       })
     end
 
+    it 'gets metrics for a range' do
+      expect(@metrics.find('simple-metric', '2016-11-02T14:55:07+00:00','2016-12-02T14:55:07+00:00')).to eq({
+        "count" => 5,
+        "values" => [
+          {"time"=>"2016-11-28T07:00:16.534+00:00", "value"=>16},
+          {"time"=>"2016-11-29T07:00:16.516+00:00", "value"=>8},
+          {"time"=>"2016-11-30T07:00:16.497+00:00", "value"=>86},
+          {"time"=>"2016-12-01T07:00:16.475+00:00", "value"=>32},
+          {"time"=>"2016-12-02T07:00:16.450+00:00", "value"=>22}
+        ]
+      })
+    end
+
   end
 end

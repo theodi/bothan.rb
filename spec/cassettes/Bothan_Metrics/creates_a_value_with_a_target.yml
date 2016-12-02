@@ -1,0 +1,95 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://demo.bothan.io/metrics/my-new-target-metric
+    body:
+      encoding: UTF-8
+      string: '{"time":"2016-11-28T09:00:00","value":{"actual":1091000,"annual_target":2862000,"ytd_target":1368000}}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Authorization:
+      - Basic dXNlcm5hbWU6cGFzc3dvcmQ=
+  response:
+    status:
+      code: 500
+      message: Internal Server Error
+    headers:
+      Date:
+      - Fri, 02 Dec 2016 21:18:51 GMT
+      Content-Type:
+      - text/html;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d4e52967ea34eabf3bab786e2b90228121480713531; expires=Sat, 02-Dec-17
+        21:18:51 GMT; path=/; domain=.bothan.io; HttpOnly
+      Vary:
+      - Accept, Origin
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Via:
+      - 1.1 vegur
+      Strict-Transport-Security:
+      - max-age=0; includeSubDomains
+      Server:
+      - cloudflare-nginx
+      Cf-Ray:
+      - 30b1d0513d0706e2-LHR
+    body:
+      encoding: UTF-8
+      string: "<h1>Internal Server Error</h1>"
+    http_version: 
+  recorded_at: Fri, 02 Dec 2016 21:18:52 GMT
+- request:
+    method: get
+    uri: https://demo.bothan.io/metrics/my-new-target-metric
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Authorization:
+      - Basic dXNlcm5hbWU6cGFzc3dvcmQ=
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 02 Dec 2016 21:18:51 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '184'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d439bfe83be26c4703eacc41481883b5d1480713531; expires=Sat, 02-Dec-17
+        21:18:51 GMT; path=/; domain=.bothan.io; HttpOnly
+      Vary:
+      - Accept, Origin
+      X-Content-Type-Options:
+      - nosniff
+      Via:
+      - 1.1 vegur
+      Strict-Transport-Security:
+      - max-age=0; includeSubDomains
+      Server:
+      - cloudflare-nginx
+      Cf-Ray:
+      - 30b1d0522e4b35d2-LHR
+    body:
+      encoding: UTF-8
+      string: '{"_id":{"$oid":"5841e5186fa6570004f8d018"},"name":"my-new-target-metric","time":"2016-11-28T09:00:00.000+00:00","value":{"actual":1091000,"annual_target":2862000,"ytd_target":1368000}}'
+    http_version: 
+  recorded_at: Fri, 02 Dec 2016 21:18:52 GMT
+recorded_with: VCR 3.0.3

@@ -12,7 +12,9 @@ module Bothan
     end
 
     def find(metric)
-      self.class.get("/metrics/#{metric}").parsed_response
+      metric = self.class.get("/metrics/#{metric}").parsed_response
+      raise MetricNotFound if metric.nil?
+      metric
     end
 
   end

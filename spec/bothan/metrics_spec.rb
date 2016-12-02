@@ -43,5 +43,9 @@ module Bothan
       })
     end
 
+    it 'returns an error for a non-existent metric' do
+      expect { @metrics.find('not-a-metric') }.to raise_error(Bothan::MetricNotFound)
+    end
+
   end
 end

@@ -1,0 +1,45 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://demo.bothan.io/metrics/not-a-metric
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 02 Dec 2016 14:18:33 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '4'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d680e190a18f088aa44e561e2b92201da1480688313; expires=Sat, 02-Dec-17
+        14:18:33 GMT; path=/; domain=.bothan.io; HttpOnly
+      Vary:
+      - Accept, Origin
+      X-Content-Type-Options:
+      - nosniff
+      Via:
+      - 1.1 vegur
+      Strict-Transport-Security:
+      - max-age=0; includeSubDomains
+      Server:
+      - cloudflare-nginx
+      Cf-Ray:
+      - 30af68a5f8630a6c-LHR
+    body:
+      encoding: UTF-8
+      string: 'null'
+    http_version: 
+  recorded_at: Fri, 02 Dec 2016 14:18:33 GMT
+recorded_with: VCR 3.0.3

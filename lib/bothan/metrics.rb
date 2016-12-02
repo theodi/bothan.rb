@@ -24,5 +24,13 @@ module Bothan
       metric
     end
 
+    def create(name, value, time = DateTime.now)
+      json = {
+        time: time.to_s,
+        value: value
+      }.to_json
+      self.class.post("/metrics/#{name}", body: json, headers: { 'Content-Type' => 'application/json' } )
+    end
+
   end
 end

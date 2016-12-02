@@ -69,5 +69,15 @@ module Bothan
       })
     end
 
+    it 'creates a simple metric' do
+      @metrics.create('my-new-metric', 12, "2016-11-28T09:00:00")
+      expect(@metrics.find('my-new-metric')).to eq({
+        "_id" => {"$oid"=>"5841e4386fa6570004f8d016"},
+        "name"=>"my-new-metric",
+        "time"=>"2016-11-28T09:00:00.000+00:00",
+        "value"=>12
+      })
+    end
+
   end
 end

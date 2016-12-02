@@ -1,0 +1,93 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://demo.bothan.io/metrics/my-new-metric
+    body:
+      encoding: UTF-8
+      string: '{"time":"2016-11-28T09:00:00","value":12}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Authorization:
+      - Basic dXNlcm5hbWU6cGFzc3dvcmQ=
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Date:
+      - Fri, 02 Dec 2016 21:14:32 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '0'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=dfb6af5dfe7891759441750fd0de8df231480713272; expires=Sat, 02-Dec-17
+        21:14:32 GMT; path=/; domain=.bothan.io; HttpOnly
+      Vary:
+      - Accept, Origin
+      X-Content-Type-Options:
+      - nosniff
+      Via:
+      - 1.1 vegur
+      Strict-Transport-Security:
+      - max-age=0; includeSubDomains
+      Server:
+      - cloudflare-nginx
+      Cf-Ray:
+      - 30b1c9ffc8551365-LHR
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Fri, 02 Dec 2016 21:14:33 GMT
+- request:
+    method: get
+    uri: https://demo.bothan.io/metrics/my-new-metric
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Authorization:
+      - Basic dXNlcm5hbWU6cGFzc3dvcmQ=
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 02 Dec 2016 21:14:33 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '116'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=dfd21b27888fd46a70629c29a650cdccf1480713272; expires=Sat, 02-Dec-17
+        21:14:32 GMT; path=/; domain=.bothan.io; HttpOnly
+      Vary:
+      - Accept, Origin
+      X-Content-Type-Options:
+      - nosniff
+      Via:
+      - 1.1 vegur
+      Strict-Transport-Security:
+      - max-age=0; includeSubDomains
+      Server:
+      - cloudflare-nginx
+      Cf-Ray:
+      - 30b1ca036c783458-LHR
+    body:
+      encoding: UTF-8
+      string: '{"_id":{"$oid":"5841e4386fa6570004f8d016"},"name":"my-new-metric","time":"2016-11-28T09:00:00.000+00:00","value":12}'
+    http_version: 
+  recorded_at: Fri, 02 Dec 2016 21:14:34 GMT
+recorded_with: VCR 3.0.3

@@ -11,5 +11,9 @@ module Bothan
       self.class.get('/metrics').parsed_response
     end
 
+    def find(metric)
+      self.class.get("/metrics/#{metric}").parsed_response
+    end
+
   end
 end

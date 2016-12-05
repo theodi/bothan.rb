@@ -1,0 +1,93 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://demo.bothan.io/metrics/my-awesome-geo-metric
+    body:
+      encoding: UTF-8
+      string: '{"time":"2016-11-28T09:00:00","value":{"type":"FeatureCollection","features":[{"type":"Feature","geometry":{"type":"Point","coordinates":[-2.6156582783015017,54.3497405310758]}},{"type":"Feature","geometry":{"type":"Point","coordinates":[-6.731370299641439,55.856756177781186]}}]}}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Authorization:
+      - Basic dXNlcm5hbWU6cGFzc3dvcmQ=
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Date:
+      - Mon, 05 Dec 2016 09:38:46 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '0'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d79097d96c58d1d1a46d98e8aa442ba2c1480930725; expires=Tue, 05-Dec-17
+        09:38:45 GMT; path=/; domain=.bothan.io; HttpOnly
+      Vary:
+      - Accept, Origin
+      X-Content-Type-Options:
+      - nosniff
+      Via:
+      - 1.1 vegur
+      Strict-Transport-Security:
+      - max-age=0; includeSubDomains
+      Server:
+      - cloudflare-nginx
+      Cf-Ray:
+      - 30c686eccae634b2-LHR
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Mon, 05 Dec 2016 09:38:46 GMT
+- request:
+    method: get
+    uri: https://demo.bothan.io/metrics/my-awesome-geo-metric
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Authorization:
+      - Basic dXNlcm5hbWU6cGFzc3dvcmQ=
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 05 Dec 2016 09:38:46 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '364'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d9f90ad44a7785cac7fb0e28a290bc6d81480930726; expires=Tue, 05-Dec-17
+        09:38:46 GMT; path=/; domain=.bothan.io; HttpOnly
+      Vary:
+      - Accept, Origin
+      X-Content-Type-Options:
+      - nosniff
+      Via:
+      - 1.1 vegur
+      Strict-Transport-Security:
+      - max-age=0; includeSubDomains
+      Server:
+      - cloudflare-nginx
+      Cf-Ray:
+      - 30c686edfb233452-LHR
+    body:
+      encoding: UTF-8
+      string: '{"_id":{"$oid":"584535a6c5661700040e61e0"},"name":"my-awesome-geo-metric","time":"2016-11-28T09:00:00.000+00:00","value":{"type":"FeatureCollection","features":[{"type":"Feature","geometry":{"type":"Point","coordinates":[-2.6156582783015017,54.3497405310758]}},{"type":"Feature","geometry":{"type":"Point","coordinates":[-6.731370299641439,55.856756177781186]}}]}}'
+    http_version: 
+  recorded_at: Mon, 05 Dec 2016 09:38:46 GMT
+recorded_with: VCR 3.0.3

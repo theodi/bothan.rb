@@ -123,5 +123,35 @@ module Bothan
       })
     end
 
+    it 'creates a geo metric' do
+      values = [
+        {
+          "type" => "Feature",
+          "geometry" => {
+            "type" => "Point",
+            "coordinates" => [-2.6156582783015017, 54.3497405310758]
+          }
+        },
+        {
+          "type" => "Feature",
+          "geometry" => {
+            "type" => "Point",
+             "coordinates" => [-6.731370299641439, 55.856756177781186]
+          }
+        }
+      ]
+
+      @metrics.create_geo('my-awesome-geo-metric', values, "2016-11-28T09:00:00")
+      expect(@metrics.find('my-awesome-geo-metric')).to eq({
+        "_id" => {"$oid"=>"584535a6c5661700040e61e0"},
+        "name"=>"my-awesome-geo-metric",
+        "time"=>"2016-11-28T09:00:00.000+00:00",
+        "value"=>{
+          "type" => "FeatureCollection",
+          "features" => values
+        }
+      })
+    end
+
   end
 end

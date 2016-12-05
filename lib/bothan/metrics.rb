@@ -48,6 +48,15 @@ module Bothan
       create_metric(name, value, time)
     end
 
+    def create_geo(name, features, time = DateTime.now)
+      value = {
+        type: "FeatureCollection",
+        features: features
+      }
+
+      create_metric(name, value, time)
+    end
+
     private
 
       def create_metric(name, value, time = DateTime.now)

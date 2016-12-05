@@ -1,4 +1,12 @@
 language: ruby
 rvm:
-  - 2.1.4
+- 2.1.4
 before_install: gem install bundler -v 1.11.2
+deploy:
+  provider: rubygems
+  api_key:
+    secure: eK0WoXo122Y6i8+acj93cD/35YJt7UJy60WcwQwftyCsOuv7UFk+LgFrTrO/sKqPbLrIGn9LIXfXBAnEY9jufo33mcrhjE5fNxMnOG8L6iABVx5v3U2jec83eferEgyyLl5TXPHa1HiZjIg7MI1QpvYQD4lsvOuU2vrYuw96JdRohGsw4tT+LOyO060Ko0VCUHag/vRJY3mm3z2xRcsl3RtJL4xiYgOy2EpbTPzoEZUmaGnpY0THX6RjUYLJqW1ijvgHNPXFgKidKxdsJ/DE03bzl19tVrp+Jdk7uxwv7wWBuDv0B9msa51ZN0i2bw4zXCDUFzY8lTUp0dlULpBBu32V7Rnv3akW7TPHQyrwjLFVqRQEGEPXOI9aUFwi8ldSk/l8CDrQ7wZ/aBc1Kp8KBXV34NssRgMQnAhJZizVa6VwySPmFRKvKTamUcoYyYg6qR7p7T+KL1fJtq7cg5xbmCLkVwE9kWdhrcbprhnxQpS2xM2tyTjDi3XKh8E1VqqpbddmHEqShtnV2yN+ndL3WX/X8puDhhRnCaNfFY6sApsQ6gQGP3Gz93VdzYA0Jd0G3liVAR9qCxKrioDaZCQfGBVPU5BS52TDF0yO6tiZIf7c0q7mun9skAlrBcuQdESAvZLs9rvQ8Ymc7ytdw/0I46sUX3zFJEB8h6qhFwivBmg=
+  gem: bothan
+  on:
+    tags: true
+    repo: theodi/bothan.rb

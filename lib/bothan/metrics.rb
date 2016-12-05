@@ -21,7 +21,7 @@ module Bothan
         metric = self.class.get("/metrics/#{metric}/#{from}/#{to}").parsed_response
       end
       raise MetricNotFound if metric.nil?
-      metric
+      metric['count'] ? metric['values'] : metric
     end
 
     def create_single(name, value, time = DateTime.now)

@@ -93,5 +93,17 @@ module Bothan
       })
     end
 
+    it 'creates a metric without a ytd target' do
+      @metrics.create_target('my-awesome-new-target-metric', 1091000, 2862000, nil, "2016-11-28T09:00:00")
+      expect(@metrics.find('my-awesome-new-target-metric')).to eq({
+        "_id" => {"$oid"=>"58452fa8c5661700040e61dc"},
+        "name"=>"my-awesome-new-target-metric",
+        "time"=>"2016-11-28T09:00:00.000+00:00",
+        "value"=>{
+          "actual" => 1091000,
+          "annual_target" => 2862000,
+        }
+      })
+    end
   end
 end

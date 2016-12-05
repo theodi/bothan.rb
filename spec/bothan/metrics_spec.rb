@@ -4,7 +4,7 @@ module Bothan
   describe Metrics, :vcr do
 
     before(:each) do
-      @metrics = described_class.new('https://demo.bothan.io', 'username', 'password')
+      @metrics = described_class.new('username', 'password', 'https://demo.bothan.io')
     end
 
     it 'lists metrics' do

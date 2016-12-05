@@ -3,7 +3,7 @@ module Bothan
     include HTTParty
     headers 'Accept' => 'application/json'
 
-    def initialize(endpoint, username, password)
+    def initialize(username, password, endpoint)
       self.class.base_uri endpoint
       self.class.basic_auth username, password
     end

@@ -2,8 +2,11 @@ module Bothan
   class Connection
 
     def initialize(username, password, endpoint)
-      @endpoint = URI(endpoint)
-      @endpoint.userinfo = "#{username}:#{password}"
+      @username, @password, @endpoint = username, password, endpoint
+    end
+
+    def metrics
+      Metrics.new(@username, @password, @endpoint)
     end
 
   end

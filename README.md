@@ -1,3 +1,9 @@
+[![Build Status](http://img.shields.io/travis/theodi/bothan.rb.svg?style=flat-square)](https://travis-ci.org/theodi/bothan.rb)
+[![Dependency Status](http://img.shields.io/gemnasium/theodi/bothan.rb.svg?style=flat-square)](https://gemnasium.com/theodi/bothan.rb)
+[![Code Climate](http://img.shields.io/codeclimate/github/theodi/bothan.rb.svg?style=flat-square)](https://codeclimate.com/github/theodi/bothan.rb)
+[![Gem Version](http://img.shields.io/gem/v/bothan.svg?style=flat-square)](https://rubygems.org/gems/bothan)
+[![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://theodi.mit-license.org)
+
 # Bothan
 
 A Ruby client for [Bothan](https://bothan.io/), a simple platform for storing and publishing metrics.
@@ -175,4 +181,3 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/[USERN
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
- 

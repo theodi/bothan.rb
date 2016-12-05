@@ -6,7 +6,7 @@ module Bothan
     end
 
     def metrics
-      Metrics.new(@username, @password, @endpoint)
+      @metrics ||= Metrics.new(@username, @password, @endpoint)
     end
 
   end

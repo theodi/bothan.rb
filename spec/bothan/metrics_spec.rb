@@ -105,5 +105,23 @@ module Bothan
         }
       })
     end
+
+    it 'creates a metric with multiple values' do
+      values = {
+        "value1" => 123,
+        "value2" => 23213,
+        "value4" => 1235
+      }
+      @metrics.create_multiple('my-awesome-mulitple-metric', values, "2016-11-28T09:00:00")
+      expect(@metrics.find('my-awesome-mulitple-metric')).to eq({
+        "_id" => {"$oid"=>"5845335cc5661700040e61de"},
+        "name"=>"my-awesome-mulitple-metric",
+        "time"=>"2016-11-28T09:00:00.000+00:00",
+        "value"=>{
+          "total" => values
+        }
+      })
+    end
+
   end
 end

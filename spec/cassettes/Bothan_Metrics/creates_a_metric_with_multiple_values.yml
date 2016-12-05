@@ -1,0 +1,93 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://demo.bothan.io/metrics/my-awesome-mulitple-metric
+    body:
+      encoding: UTF-8
+      string: '{"time":"2016-11-28T09:00:00","value":{"total":{"value1":123,"value2":23213,"value4":1235}}}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Authorization:
+      - Basic dXNlcm5hbWU6cGFzc3dvcmQ=
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Date:
+      - Mon, 05 Dec 2016 09:29:00 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '0'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d2eeac7de08af4c53c0207637e103244c1480930140; expires=Tue, 05-Dec-17
+        09:29:00 GMT; path=/; domain=.bothan.io; HttpOnly
+      Vary:
+      - Accept, Origin
+      X-Content-Type-Options:
+      - nosniff
+      Via:
+      - 1.1 vegur
+      Strict-Transport-Security:
+      - max-age=0; includeSubDomains
+      Server:
+      - cloudflare-nginx
+      Cf-Ray:
+      - 30c678a4bfdf0a6c-LHR
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Mon, 05 Dec 2016 09:29:01 GMT
+- request:
+    method: get
+    uri: https://demo.bothan.io/metrics/my-awesome-mulitple-metric
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Authorization:
+      - Basic dXNlcm5hbWU6cGFzc3dvcmQ=
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 05 Dec 2016 09:29:01 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '180'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d2618b3bb6595d395a34ff557b72c8ec31480930141; expires=Tue, 05-Dec-17
+        09:29:01 GMT; path=/; domain=.bothan.io; HttpOnly
+      Vary:
+      - Accept, Origin
+      X-Content-Type-Options:
+      - nosniff
+      Via:
+      - 1.1 vegur
+      Strict-Transport-Security:
+      - max-age=0; includeSubDomains
+      Server:
+      - cloudflare-nginx
+      Cf-Ray:
+      - 30c678a57b990b7b-LHR
+    body:
+      encoding: UTF-8
+      string: '{"_id":{"$oid":"5845335cc5661700040e61de"},"name":"my-awesome-mulitple-metric","time":"2016-11-28T09:00:00.000+00:00","value":{"total":{"value1":123,"value2":23213,"value4":1235}}}'
+    http_version: 
+  recorded_at: Mon, 05 Dec 2016 09:29:01 GMT
+recorded_with: VCR 3.0.3

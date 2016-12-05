@@ -36,7 +36,15 @@ module Bothan
         annual_target: annual_target,
         ytd_target: ytd_target
       }.delete_if { |k, v| v.nil? }
-      
+
+      create_metric(name, value, time)
+    end
+
+    def create_multiple(name, values, time = DateTime.now)
+      value = {
+        total: values
+      }
+
       create_metric(name, value, time)
     end
 

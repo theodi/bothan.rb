@@ -80,17 +80,16 @@ module Bothan
     end
 
     it 'creates a value with a target' do
-      value = {
-        "actual" => 1091000,
-        "annual_target" => 2862000,
-        "ytd_target" => 1368000
-      }
-      @metrics.create('my-new-target-metric', value, "2016-11-28T09:00:00")
+      @metrics.create_target('my-new-target-metric', 1091000, 2862000, 1368000, "2016-11-28T09:00:00")
       expect(@metrics.find('my-new-target-metric')).to eq({
         "_id" => {"$oid"=>"5841e5186fa6570004f8d018"},
         "name"=>"my-new-target-metric",
         "time"=>"2016-11-28T09:00:00.000+00:00",
-        "value"=>value
+        "value"=>{
+          "actual" => 1091000,
+          "annual_target" => 2862000,
+          "ytd_target" => 1368000
+        }
       })
     end
 

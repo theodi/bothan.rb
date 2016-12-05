@@ -30,6 +30,16 @@ module Bothan
 
     alias_method :create, :create_single
 
+    def create_target(name, actual, annual_target, ytd_target = nil, time = DateTime.now)
+      value = {
+        actual: actual,
+        annual_target: annual_target,
+        ytd_target: ytd_target
+      }.delete_if { |k, v| v.nil? }
+      
+      create_metric(name, value, time)
+    end
+
     private
 
       def create_metric(name, value, time = DateTime.now)

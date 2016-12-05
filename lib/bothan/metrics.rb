@@ -9,7 +9,7 @@ module Bothan
     end
 
     def all
-      self.class.get('/metrics').parsed_response
+      (self.class.get('/metrics').parsed_response || {})['metrics']
     end
 
     def find(metric, from = nil, to = nil)

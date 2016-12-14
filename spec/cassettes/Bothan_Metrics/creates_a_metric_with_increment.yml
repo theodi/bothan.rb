@@ -1,0 +1,93 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://demo.bothan.io/metrics/my-new-incremental-metric/increment/1
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Authorization:
+      - Basic dXNlcm5hbWU6cGFzc3dvcmQ=
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Date:
+      - Wed, 14 Dec 2016 11:46:32 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '0'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d7b5b5c1a72700020b32cae8f20709d9d1481715979; expires=Thu, 14-Dec-17
+        11:46:19 GMT; path=/; domain=.bothan.io; HttpOnly
+      Vary:
+      - Accept, Origin
+      X-Content-Type-Options:
+      - nosniff
+      Via:
+      - 1.1 vegur
+      Strict-Transport-Security:
+      - max-age=0; includeSubDomains
+      Server:
+      - cloudflare-nginx
+      Cf-Ray:
+      - 31116a27da3c356c-LHR
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Wed, 14 Dec 2016 11:46:32 GMT
+- request:
+    method: get
+    uri: https://demo.bothan.io/metrics/my-new-incremental-metric
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Authorization:
+      - Basic dXNlcm5hbWU6cGFzc3dvcmQ=
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 14 Dec 2016 11:46:32 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '127'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d395b17a0a02a0be50266a39c56beafbd1481715992; expires=Thu, 14-Dec-17
+        11:46:32 GMT; path=/; domain=.bothan.io; HttpOnly
+      Vary:
+      - Accept, Origin
+      X-Content-Type-Options:
+      - nosniff
+      Via:
+      - 1.1 vegur
+      Strict-Transport-Security:
+      - max-age=0; includeSubDomains
+      Server:
+      - cloudflare-nginx
+      Cf-Ray:
+      - 31116a784e5f3452-LHR
+    body:
+      encoding: UTF-8
+      string: '{"_id":{"$oid":"5851311816054e000433d882"},"name":"my-new-incremental-metric","time":"2016-12-14T11:46:32.166+00:00","value":1}'
+    http_version: 
+  recorded_at: Wed, 14 Dec 2016 11:46:32 GMT
+recorded_with: VCR 3.0.3

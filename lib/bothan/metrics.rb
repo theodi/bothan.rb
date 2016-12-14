@@ -57,6 +57,10 @@ module Bothan
       create_metric(name, value, time)
     end
 
+    def increment(name, amount = 1)
+      self.class.post("/metrics/#{name}/increment/#{amount}", headers: { 'Content-Type' => 'application/json' })
+    end
+
     private
 
       def create_metric(name, value, time = DateTime.now)

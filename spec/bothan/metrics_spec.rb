@@ -148,5 +148,22 @@ module Bothan
       })
     end
 
+    it 'creates a metric with increment' do
+      @metrics.increment('my-new-incremental-metric')
+      expect(@metrics.find('my-new-incremental-metric')['value']).to eq(1)
+    end
+
+    it 'increments an existing metric' do
+      @metrics.create('brand-new-incremental-metric', 4)
+      @metrics.increment('brand-new-incremental-metric')
+      expect(@metrics.find('brand-new-incremental-metric')['value']).to eq(5)
+    end
+
+    it 'increments an existing metric by a certain amount' do
+      @metrics.create('another-new-incremental-metric', 4)
+      @metrics.increment('another-new-incremental-metric', 10)
+      expect(@metrics.find('another-new-incremental-metric')['value']).to eq(14)
+    end
+
   end
 end

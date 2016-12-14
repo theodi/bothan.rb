@@ -1,0 +1,139 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://demo.bothan.io/metrics/another-new-incremental-metric
+    body:
+      encoding: UTF-8
+      string: '{"time":"2016-12-14T14:43:15+00:00","value":4}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Authorization:
+      - Basic dXNlcm5hbWU6cGFzc3dvcmQ=
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Date:
+      - Wed, 14 Dec 2016 14:43:15 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '0'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d61d6c801c50b6172bd92c456933e10731481726595; expires=Thu, 14-Dec-17
+        14:43:15 GMT; path=/; domain=.bothan.io; HttpOnly
+      Vary:
+      - Accept, Origin
+      X-Content-Type-Options:
+      - nosniff
+      Via:
+      - 1.1 vegur
+      Strict-Transport-Security:
+      - max-age=0; includeSubDomains
+      Server:
+      - cloudflare-nginx
+      Cf-Ray:
+      - 31126d55e8f33488-LHR
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Wed, 14 Dec 2016 14:43:15 GMT
+- request:
+    method: post
+    uri: https://demo.bothan.io/metrics/another-new-incremental-metric/increment/10
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Authorization:
+      - Basic dXNlcm5hbWU6cGFzc3dvcmQ=
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Date:
+      - Wed, 14 Dec 2016 14:43:15 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '0'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=dea14e8f3193e85c0503704cd9a89a2271481726595; expires=Thu, 14-Dec-17
+        14:43:15 GMT; path=/; domain=.bothan.io; HttpOnly
+      Vary:
+      - Accept, Origin
+      X-Content-Type-Options:
+      - nosniff
+      Via:
+      - 1.1 vegur
+      Strict-Transport-Security:
+      - max-age=0; includeSubDomains
+      Server:
+      - cloudflare-nginx
+      Cf-Ray:
+      - 31126d57f863353c-LHR
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Wed, 14 Dec 2016 14:43:16 GMT
+- request:
+    method: get
+    uri: https://demo.bothan.io/metrics/another-new-incremental-metric
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Authorization:
+      - Basic dXNlcm5hbWU6cGFzc3dvcmQ=
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 14 Dec 2016 14:43:16 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '133'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=dbba702e07cc8a3b9fb4c6d97f8e7a6671481726596; expires=Thu, 14-Dec-17
+        14:43:16 GMT; path=/; domain=.bothan.io; HttpOnly
+      Vary:
+      - Accept, Origin
+      X-Content-Type-Options:
+      - nosniff
+      Via:
+      - 1.1 vegur
+      Strict-Transport-Security:
+      - max-age=0; includeSubDomains
+      Server:
+      - cloudflare-nginx
+      Cf-Ray:
+      - 31126d593f9b35a8-LHR
+    body:
+      encoding: UTF-8
+      string: '{"_id":{"$oid":"58515a83fc5401000455a72d"},"name":"another-new-incremental-metric","time":"2016-12-14T14:43:15.891+00:00","value":14}'
+    http_version: 
+  recorded_at: Wed, 14 Dec 2016 14:43:16 GMT
+recorded_with: VCR 3.0.3
